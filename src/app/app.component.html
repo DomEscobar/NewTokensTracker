@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="card border-primary mt-3">
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Name</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Type</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let token of tokens$ |async">
+            <th scope="row">{{token.block.timestamp.time}}</th>
+            <td>{{token.smartContract.currency.name}}</td>
+            <td>{{token.smartContract.currency.symbol}}</td>
+            <td>{{token.smartContract.currency.tokenType}}</td>
+            <td><a [href]="'https://etherscan.io/address/' + token.smartContract.address.address">
+                Etherscan</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
