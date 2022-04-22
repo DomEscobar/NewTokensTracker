@@ -21,7 +21,7 @@ export class BaseService {
     const add = param != '' ? + '/' + param : '';
 
     const observer = this.http.get<any>(apiUrl + path + add, {}).pipe(
-      map((o) => o.data.ethereum.smartContractCalls as T),
+      map((o) => o.reverse()),
       catchError(err => {
         if (showError) {
           return of([]);
