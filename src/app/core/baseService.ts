@@ -21,7 +21,7 @@ export class BaseService {
     const add = param != '' ? + '/' + param : '';
 
     const observer = this.http.get<any>(apiUrl + path + add, {}).pipe(
-      map((o) => o.reverse()),
+      map((o) => o),
       catchError(err => {
         if (showError) {
           return of([]);
