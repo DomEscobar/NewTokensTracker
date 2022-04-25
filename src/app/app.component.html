@@ -4,20 +4,20 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">Block</th>
+            <th scope="col">Holders</th>
             <th scope="col">Name</th>
-            <th scope="col">Transaction</th>
-            <th scope="col">Address</th>
+            <th scope="col">Created</th>
+            <th scope="col">Defined</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let token of tokens$ |async">
-            <th scope="row">{{token.log.blockNumber}}</th>
+            <th scope="row">{{token.holders}}</th>
             <td>{{token.name}}</td>
             <td><a [href]="'https://etherscan.io/tx/' + token.log.transactionHash">
                 Open </a>
             </td>
-            <td><a [href]="'https://etherscan.io/address/' + token.log.address">
+            <td><a [href]="'https://www.defined.fi/eth/' + token.log.address">
                 Open</a>
             </td>
           </tr>
