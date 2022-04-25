@@ -13,11 +13,11 @@
         <tbody>
           <tr *ngFor="let token of tokens$ |async">
             <th scope="row">{{token.holders}}</th>
-            <td>{{token.name}}</td>
+            <td>({{token.symbol}}) - {{token.name}}</td>
             <td><a [href]="'https://etherscan.io/tx/' + token.log.transactionHash">
                 Open </a>
             </td>
-            <td><a [href]="'https://www.defined.fi/eth/' + token.log.address">
+            <td><a [href]="'https://www.defined.fi/eth/' + token.liquidityData.address">
                 Open</a>
             </td>
           </tr>
