@@ -4,6 +4,7 @@ export interface TokenModel {
     symbol: string;
     holders: number;
     liquidityData: { address: string, fromBlock: number }
+    time: number | Date
 }
 
 interface LogData {

@@ -8,6 +8,7 @@
             <th scope="col">Name</th>
             <th scope="col">Created</th>
             <th scope="col">Defined</th>
+            <th scope="col">Last</th>
           </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
             <td><a [href]="'https://www.defined.fi/eth/' + token.liquidityData.address">
                 Open</a>
             </td>
+            <td>{{token.time | date: 'HH:mm (dd)'}}</td>
           </tr>
         </tbody>
       </table>
