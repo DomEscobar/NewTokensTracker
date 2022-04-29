@@ -5,6 +5,7 @@
         <thead>
           <tr>
             <th scope="col">Holders</th>
+            <th scope="col">Buy</th>
             <th scope="col">Name</th>
             <th scope="col">Created</th>
             <th scope="col">Defined</th>
@@ -14,6 +15,7 @@
         <tbody>
           <tr *ngFor="let token of tokens$ |async">
             <th scope="row">{{token.holders}}</th>
+            <td>({{token.isBuyable}}</td>
             <td>({{token.symbol}}) - {{token.name}}</td>
             <td><a [href]="'https://etherscan.io/tx/' + token.log.transactionHash">
                 Open </a>

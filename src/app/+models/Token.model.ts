@@ -5,6 +5,7 @@ export interface TokenModel {
     holders: number;
     liquidityData: { address: string, fromBlock: number }
     time: number | Date
+    isBuyable: boolean;
 }
 
 interface LogData {
